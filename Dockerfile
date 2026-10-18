@@ -3,5 +3,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git build-essential libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 RUN pip install --no-cache-dir -U "Red-DiscordBot[postgres]"
+RUN git clone --depth 1 https://github.com/AAA3A-AAA3A/AAA3A-cogs /cogs/AAA3A-cogs
 COPY start.sh /start.sh
 CMD ["bash", "/start.sh"]
